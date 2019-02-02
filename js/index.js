@@ -4,6 +4,10 @@ h1.addEventListener('dblclick', e => {
     h1.style.color = 'red';
 });
 
+window.addEventListener('scroll', e => {
+    h1.style.backgroundColor = 'magenta';
+});
+
 let anchor = document.querySelectorAll('.nav-link');
 anchor.forEach(function(a) {
     let randStyle = Math.random() * 5.1;
@@ -16,6 +20,13 @@ anchor.forEach(function(a) {
         } else {
             return a.style.color = 'green';
         }
+    });
+});
+
+let h2 = document.querySelectorAll('h2');
+h2.forEach(function(elem) {
+    elem.addEventListener('mousedown', e => {
+        elem.style.fontWeight = '999';
     });
 });
 
